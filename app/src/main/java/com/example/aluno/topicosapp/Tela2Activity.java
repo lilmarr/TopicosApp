@@ -37,21 +37,30 @@ public class Tela2Activity extends AppCompatActivity {
 
                 valor = Double.parseDouble(editTextVa.getText().toString());
                 cotação = Double.parseDouble(editTextCot.getText().toString());
+                textViewResultado = (TextView) findViewById(R.id.textViewResultado);
+                buttonCal = (Button) findViewById(R.id.buttonCal);
 
 
-                /*
+                buttonCal.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                resultado = (peso/(altura*altura));
+                        valor = Double.parseDouble(editTextVa.getText().toString());
+                        cotação = Double.parseDouble(editTextCot.getText().toString());
 
-                finalizado = Double.toString(resultado);
+                        resultado = (valor * cotação);
 
-                textViewResultado.setText(finalizado);
-         */
+                        finalizado = Double.toString(resultado);
+
+                        textViewResultado.setText(finalizado);
 
 
-        }
+                    }
 
-   });
-}
+
+                });
+            }
+
+        });
     }
-
+}
